@@ -46,7 +46,19 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
               "budgets": [
+
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
@@ -106,5 +118,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5c3475e5-14a8-401f-aa1a-2473e9c9d767"
   }
 }

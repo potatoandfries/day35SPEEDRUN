@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let search of SearchList" >
+        <a [routerLink]="['/weather',search.city]">{{ search.city }}</a>
+    </li>
+  </ul>

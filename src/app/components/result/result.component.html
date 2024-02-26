@@ -1,0 +1,12 @@
+<div *ngIf="Weather$ | async as weather; else error">
+    <p>Current Weather: {{ weather.main.temp }}°C</p>
+    <p>Feels like: {{ weather.main.feels_like }}°C</p>
+    <p>humidity: {{ weather.main.humidity }}%</p>
+    <!-- UNIQUE SEE I CAN ONLY TAKE FIRST ENTRY-->
+    <p>Description: {{ weather.weather[0].description }}</p>
+  </div>
+
+  <!-- this doesnt work , not sure how to make it work-->
+<ng-template #error>
+ <p>Error: does not exist;</p>
+</ng-template>
